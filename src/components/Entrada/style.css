@@ -1,0 +1,15 @@
+.entradas-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 400px;
+    border-radius: 12px;
+    height: 40px;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+
+import "./App.css";
+import Diferenca from "./components/Diferenca";
+import Divisao from "./components/Divisao";
+import Entrada from "./components/Entrada";
+import Produto from "./components/Produto";
+import Soma from "./components/Soma";
 
 function App() {
+  const [n1, setN1] = useState(10);
+  const [n2, setN2] = useState(20);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Entrada n1={n1} n2={n2} onN1Change={setN1} onN2Change={setN2} />
+      <div className="resultado">
+        <Soma n1={n1} n2={n2} />
+        <Produto n1={n1} n2={n2} />
+        <Diferenca n1={n1} n2={n2} />
+        <Divisao n1={n1} n2={n2} />
+      </div>
     </div>
   );
 }
