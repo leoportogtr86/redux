@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Entrada n1={n1} n2={n2} onN1Change={setN1} onN2Change={setN2} />
+      <Entrada n1={n1} />
       <div className="resultado">
         <Soma n1={n1} n2={n2} />
         <Produto n1={n1} n2={n2} />
